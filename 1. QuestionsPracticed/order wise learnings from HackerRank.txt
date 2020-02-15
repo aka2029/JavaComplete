@@ -1,0 +1,27 @@
+1. got into the basics of "Scanner"
+	
+	Scanner scanner = new Scanner(System.in);
+String myString = scanner.next();
+int myInt = scanner.nextInt();
+scanner.close();
+
+System.out.println("myString is: " + myString);
+System.out.println("myInt is: " + myInt);
+
+--> This is the way to use scanner.
+
+2. While using scanner if we want to skip something then use .skip()
+	EG. if i want to input a line of string instead of a single tokken
+	then do as given
+	
+	Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        double d = scan.nextDouble();
+        scan.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        String s = scan.nextLine();
+
+--> Here, for having the input of complete line use scan.nextLine() instead
+of scan.next() but scan.nextLine() will also take the \n after the previous 
+input so to skip this we use "scan.skip(--this is a regex expression--)"
+
+3. 
