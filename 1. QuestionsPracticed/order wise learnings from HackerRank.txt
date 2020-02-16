@@ -27,4 +27,6 @@ input so to skip this we use "scan.skip(--this is a regex expression--)"
 3. Then in "https://www.hackerrank.com/challenges/java-output-formatting/problem"
 challenge, we learnt about formating in java using printf()
 
-The best link to refer is https://www.baeldung.com/java-printstream-printf
+The best link to refer is "https://www.baeldung.com/java-printstream-printf"
+
+4. 
