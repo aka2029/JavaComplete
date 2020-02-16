@@ -34,4 +34,8 @@ The best link to refer is "https://www.baeldung.com/java-printstream-printf"
 5. To find power of a number eg. 2^3 = 8 use "import java.lang.Math;"
 int power = (int)Math.pow(2,3); //power = 8
 
-6. 
+6. Learn how to use MIN_VALUE and MAX_VALUE function in datatypes 
+(https://www.hackerrank.com/challenges/java-datatypes/editorial) question
+while refering to their range.
+
+7. 
