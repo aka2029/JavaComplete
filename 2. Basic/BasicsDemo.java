@@ -253,6 +253,18 @@ package com.basics;
       System.out.println("s1 == \"hel\" + \"lo!\": " + (s1 == "hel" + "lo!"));
       System.out.println("s1 == \"hel\" + s5: " + (s1 == "hel" + s5));
     }
+	
+	public BasicsDemo () {
+	    System.out.println("Inside no-arg constructor ...");
+	}
+	
+	public BasicsDemo (int id) {
+	    System.out.println("Inside constructor with a parameter ...");
+	}
+	
+	{
+	    System.out.println("Inside instance initializer ...");
+	}
 		
 	public static void main(String[] args) {	
 	  // Language Basics 1
@@ -272,6 +284,7 @@ package com.basics;
       // import demo
       // package creation demo
       //stringExamples();	
-      stringPool();	  
+      //stringPool();	  
+	  BasicsDemo bd = new BasicsDemo(1);
     }       
   }
