@@ -59,4 +59,6 @@ String s = "Hello World! 3 + 3.0 = 6";
       // close the scanner
       scanner.close();
 
-8. 
+8. Learn the use of java static initializer. Static initialization blocks
+ are executed when the class is loaded, and you can initialize static
+ variables in those blocks.
