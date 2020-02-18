@@ -285,6 +285,6 @@ package com.basics;
       // package creation demo
       //stringExamples();	
       //stringPool();	  
-	  BasicsDemo bd = new BasicsDemo(1);
+	  BasicsDemo bd = new BasicsDemo(1);   //This will signal the constructors that have been initialized :)
     }       
   }
