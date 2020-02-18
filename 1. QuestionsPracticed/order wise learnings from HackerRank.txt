@@ -62,3 +62,14 @@ String s = "Hello World! 3 + 3.0 = 6";
 8. Learn the use of java static initializer. Static initialization blocks
  are executed when the class is loaded, and you can initialize static
  variables in those blocks.
+
+9. Integer to String and so on.......
+	Convert using Integer.toString(int)
+
+The Integer class has a static method that returns a String object
+ representing the specified int parameter.
+
+There are several ways to do this. Refer : 
+"https://www.geeksforgeeks.org/different-ways-for-integer-to-string-conversions-in-java/"
+
+10. 
