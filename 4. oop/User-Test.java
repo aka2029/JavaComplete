@@ -1,13 +1,25 @@
 package com.semanticsquare.oop;
 
+import com.semanticsquare.oop.p2.C2;
+
 public class UserTest {
-	public void printUserType(User u) { 	//this is the method
+	
+	public void printUserType(User u) {		//this is the method
 											// that we just have one
 											// method and can pass
 											// different objects of 
 											//different classes
-	   u.printUserType();
+	    u.printUserType();
 	}
+	
+	public void approveReview(Staff s) {
+		if (s instanceof Editor) {
+			((Editor) s).approveReview(); 
+        } else {
+        	System.out.println("Invalid object passed!!");
+        }
+	}
+
 	
 	public static void main(String[] args) {
 		// Part 1
@@ -15,14 +27,19 @@ public class UserTest {
 		User staff = new Staff();
 		User editor = new Editor();
 		
-		UserTest ut = new UserTest();
+		/*UserTest ut = new UserTest();
 		ut.printUserType(user);
 		ut.printUserType(staff);
-		ut.printUserType(editor);
+		ut.printUserType(editor);*/
 		
 		// Part 2
-		/*editor.approveReview();
-		editor.postAReview();
-		editor.saveWebLink();*/
+		//editor.approveReview();
+		//editor.postAReview();
+		editor.saveWebLink();	
+		
+		// Casting & instanceof demo
+		//UserTest ut = new UserTest();
+		//ut.approveReview(new Staff());
+		//ut.approveReview(new Editor());		
 	}
 }
