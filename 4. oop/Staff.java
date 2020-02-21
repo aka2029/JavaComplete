@@ -1,30 +1,33 @@
 package com.semanticsquare.oop;
 
-public class User {
-   public int id = 1;
+public class Staff extends User {
+	public int id = 2;	
+	public void printId() {
+		System.out.println("id: " + id);
+		System.out.println("super.id: " + super.id);
+	}
 	
-   public void printUserType() {
-	   System.out.println("User");
-   }
-   
-   public void saveWebLink() {
-	   System.out.println("User: saveWebLink");
-	   //postAReview();
-   }
-   public Review postAReview(String reviewText) {
-	   System.out.println("User: postAReview");
-	   Review review = new Review(reviewText);
+	public void printUserType() {
+		System.out.println("Staff");
+	}
+	
+	public Review postAReview(String reviewText) {
+	   System.out.println("Staff: postAReview");
+	   Review review = super.postAReview(reviewText);
+	   review.setApproved(true);
 	   return review;
-   }
-   
-   // Method binding demo
-   public static void staticMethod() {
-   }
-   
-   public void instanceMethod(double d) {
-      System.out.println("User: instanceMethod");
-   }
-   public void instanceMethod(User u) {
-      System.out.println("User: instanceMethod");
-   }
+	}
+	
+	public void instanceMethod(int d) {
+	   System.out.println("Staff: instanceMethod");
+	}
+	public void instanceMethod(Staff d) {
+	   System.out.println("Staff: instanceMethod");
+	}
+	
+	//public void finalMethod() {}
+	
+	public static void staticMethod() {
+		System.out.println("Staff: staticMethod");
+	}
 }

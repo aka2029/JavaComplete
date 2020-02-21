@@ -47,10 +47,15 @@ public class UserTest {
 		//ut.approveReview(new Editor());		
 		
 		// Method binding demo
-		User staff = new Staff();
+		//User staff = new Staff();
 		//staff.staticMethod(); // part 1
 		//staff.postAReview("");
 		//staff.instanceMethod(10); // part 2
 		//staff.instanceMethod(new Staff());
+		
+		User staff = new Editor();
+		//staff.staticMethod(); // early binding
+		//((Staff) staff).staticMethod();		
+		staff.saveWebLink();		
 	}
 }
