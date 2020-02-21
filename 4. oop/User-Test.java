@@ -53,9 +53,15 @@ public class UserTest {
 		//staff.instanceMethod(10); // part 2
 		//staff.instanceMethod(new Staff());
 		
-		User staff = new Editor();
+		// What is not overridden demo
+		//User staff = new Editor();
 		//staff.staticMethod(); // early binding
 		//((Staff) staff).staticMethod();		
-		staff.saveWebLink();		
+		//staff.saveWebLink();		
+		
+		// Overriding of instance variables demo
+		User staff = new Staff();
+		//System.out.println("User type: " + staff.userType); // early binding
+		staff.displayUserInfo();// comparison of field hiding & field overriding effect
 	}
 }
