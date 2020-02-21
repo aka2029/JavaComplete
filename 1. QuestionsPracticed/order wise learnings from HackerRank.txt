@@ -77,4 +77,5 @@ Refer: "https://www.geeksforgeeks.org/calendar-class-in-java-with-examples/"
 
 But with java 8 we use java.time.LocalDate **VERY CONFUSING** ((TRY LATER))
 
-11. 
+11. Why use abstract class and what is "ABSTRACTION" 
+	REFER: "https://www.javatpoint.com/abstract-class-in-java"
