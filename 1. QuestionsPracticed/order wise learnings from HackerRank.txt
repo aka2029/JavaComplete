@@ -79,3 +79,18 @@ But with java 8 we use java.time.LocalDate **VERY CONFUSING** ((TRY LATER))
 
 11. Why use abstract class and what is "ABSTRACTION" 
 	REFER: "https://www.javatpoint.com/abstract-class-in-java"
+
+12. There is a subclass of "java.text" class called "NumberFormat" 
+i.e. "java.text.NumberFormat" this has many many methods but one of 
+them is .getCurrencyInstance()
+
+and "java.util" has a subclass called "java.util.Locale" this sets the 
+country inside previous method mentioned as shown below:
+NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+
+and the countries that have not been predefined like india then
+Locale india = new Locale("en","IN");
+
+then use india instead of Locale.INDIA bec it doesnt exist
+
+13. 
