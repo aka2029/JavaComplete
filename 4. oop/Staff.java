@@ -1,4 +1,4 @@
-package com.semanticsquare.oop;
+package com.oop;
 
 public class Staff extends User {
 	public int id = 2;	

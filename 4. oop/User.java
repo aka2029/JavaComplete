@@ -1,4 +1,4 @@
-package com.semanticsquare.oop;
+package com.oop;
 
 public class User {
    public int id = 1;

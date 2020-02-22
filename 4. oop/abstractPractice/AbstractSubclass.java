@@ -1,3 +1,5 @@
+package com.oop.abstractPractice;
+
 abstract class AbstractSubclass extends AbstractSuperclass {
 	@Override
     void test1() {

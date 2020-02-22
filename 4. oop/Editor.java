@@ -1,4 +1,4 @@
-package com.semanticsquare.oop;
+package com.oop;
 
 public class Editor extends Staff {
 	public void printUserType() {

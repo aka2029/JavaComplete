@@ -1,6 +1,6 @@
-package com.semanticsquare.oop.p2;
+package com.oop.p2;
 
-import com.semanticsquare.oop.p1.A1;
+import com.oop.p1.A1;
 
 public class B2 {
 	public static void main(String[] args) {

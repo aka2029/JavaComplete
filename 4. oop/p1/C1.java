@@ -1,4 +1,4 @@
-package com.semanticsquare.oop.p1;
+package com.oop.p1;
 
 public class C1 extends A1 {
 	public static void main(String[] args) {

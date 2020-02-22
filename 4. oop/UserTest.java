@@ -1,6 +1,6 @@
-package com.semanticsquare.oop;
+package com.oop;
 
-import com.semanticsquare.oop.p2.C2;
+import com.oop.p2.C2;
 
 public class UserTest {
 	

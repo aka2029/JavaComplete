@@ -1,3 +1,5 @@
+package com.oop.abstractPractice;
+
 public class ConcreteSubclass extends AbstractSubclass {
    @Override
    void test2() {
