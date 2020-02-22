@@ -1,3 +1,5 @@
+package com.basics.Encapsulation;
+
 public class Student {
     // variable declarations	
 	private static int studentCount;

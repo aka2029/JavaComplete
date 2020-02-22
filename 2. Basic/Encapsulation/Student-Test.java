@@ -1,3 +1,5 @@
+package com.basics.Encapsulation;
+
 class StudentTest {
     
 	public static void main(String[] args) {
