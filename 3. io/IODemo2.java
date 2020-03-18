@@ -1,4 +1,4 @@
-package com.semanticsquare.io;
+package com.io;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class IODemo {
+public class IODemo2 {
 	static String inFileStr = "walden.jpg";
 	static String outFileStr = "walden-out.jpg";
 	
