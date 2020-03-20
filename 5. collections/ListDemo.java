@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.function.Consumer;
 
 public class ListDemo {
@@ -42,7 +43,9 @@ public class ListDemo {
 
 		list2.add(1);
 
-		list1.retainAll(list2);
+		list1.retainAll(list2);		// it will leave only these
+		//elements that are common in both list1 and 2, and will
+		//remove all other elements
 		System.out.println("list1: " + list1);
 
 		list1.addAll(list2);
@@ -51,12 +54,13 @@ public class ListDemo {
 		System.out.println("list1.set(2, 2): " + list1.set(2, 2));
 
 		// Search
-		System.out.println("list1.contains(1): " + list1.contains(1));
-		System.out.println("list1.indexOf(1): " + list1.indexOf(1));
-		System.out.println("list1.lastIndexOf(1): " + list1.lastIndexOf(1));
+		System.out.println("list1.contains(1): " + list1.contains(1));	//returns true or false
+		System.out.println("list1.indexOf(1): " + list1.indexOf(1));	 //returns the index of elements
+		System.out.println("list1.lastIndexOf(1): " + list1.lastIndexOf(1));	//returns the last index of the element
 		System.out.println("list1: " + list1);
 
-		// Range-view: subList (new list is backed by original)
+		// Range-view: subList (new list is backed by original) ie any changes made in list3 will be auto. made in list1
+		// but changes made in list1 will not be made in list3
 		List<Integer> list3 = list1.subList(2, 3);		//here 3 is exclusive so only one element will be added
 		//moreover, sublist is backed by main list so any changes made in this is also made in the main list
 		list3.set(0, 6);
@@ -72,8 +76,9 @@ public class ListDemo {
 		
 		
 //commented the below code to prevent ConcurrentModificationException and hence would prevent this using an iterator
+		//if we want to remove an element during iteration then we cannot do it using list and hence need iterator
 		
-	/*	for (int element : list1) {
+	/*	for (int element : list1) {  //iterating through the elements of the list
 			System.out.println("element: " + element);
 			
 			// Generates ConcurrentModificationException
@@ -100,7 +105,7 @@ public class ListDemo {
 		}
 		System.out.println("list1: " + list1);
 		
-		//list1.forEach(System.out::println);
+		//list1.forEach(System.out::println);		//inside the bracket it is method reference, its something new to us
 		//list1.forEach(Filter::filter);
 		//list1.forEach(new Filter());	// requires implementing Consumer	
 		
@@ -109,9 +114,52 @@ public class ListDemo {
 		// A/C Brian Goetz, he doesn't see much use of this method			
 	}
 	
+	static void listIteratorDemo() {
+		  System.out.println("\n\nInside listIteratorDemo ...");
+	      List<String> list = new ArrayList<>();
+	      list.add("a");
+	      list.add("b");
+	      list.add("c");
+		  	  
+	      System.out.println("\nDisplaying current elements ... ");
+	      for (ListIterator<String> iterator = list.listIterator(); iterator.hasNext();) {
+	          System.out.println("iterator.nextIndex: " + iterator.nextIndex() + ", iterator.next: " + iterator.next());	  
+	      }
+	      
+	      System.out.println("\nDemonstrating add, remove, and set operations ... ");
+	      for (ListIterator iterator = list.listIterator(); iterator.hasNext();) {
+	          System.out.println("iterator.nextIndex: " + iterator.nextIndex() + ", iterator.next: " + iterator.next());
+			  if (iterator.nextIndex() == 1) {
+				  System.out.println("*** Adding test at index 1");
+				  iterator.add("test");
+				  System.out.println("iterator.nextIndex: " + iterator.nextIndex() + ", iterator.next: " + iterator.next());
+				  
+				  System.out.println("Removing test that was added at index 1");
+				  iterator.previous(); // "b"
+				  iterator.previous(); // "test"				  
+				  iterator.remove();   // remove "test"
+				  
+				  // Uncommenting below line gives an IllegalStateException as 
+				  // set should be preceded by next/previous/set
+				  //iterator.set("test");
+				  System.out.println("iterator.nextIndex: " + iterator.nextIndex() + ", iterator.next: " + iterator.next());
+				  System.out.println("Setting element at index 1 as test");
+				  iterator.set("test");
+				  System.out.println("Setting element at index 1 as test1 to show that two set operations can be invoked sequentially");
+				  iterator.set("test1");
+			 }  	  
+	      }	 
+	      
+	      System.out.println("\nDisplaying current elements ... ");
+	      for (ListIterator iterator = list.listIterator(); iterator.hasNext();) {
+	          System.out.println("iterator.nextIndex: " + iterator.nextIndex() + ", iterator.next: " + iterator.next());	  
+	      }
+	  }
+	
 	public static void main(String[] args) {
-		List<Integer> list1 = arrayListDemo();
-		iteratorDemo(list1);
+		// List<Integer> list1 = arrayListDemo();
+		// iteratorDemo(list1);
+		listIteratorDemo();
 	}
 }
 
