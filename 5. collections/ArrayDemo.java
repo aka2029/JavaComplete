@@ -14,8 +14,8 @@ class ArraysDemo {
 		String[] strArray = new String[]{"Raj", "Anita"};
 		List<String> strings = Arrays.asList(strArray); // fixed-size
 		System.out.println("strings: " + strings);		
-		//strings.remove(0);
-		//strings.add("a");
+		//strings.remove(0);		//ERROR
+		//strings.add("a");			//ERROR
 		strings.set(0, "john");
 		System.out.println("Updated Array: " + Arrays.toString(strArray));
 		
