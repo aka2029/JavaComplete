@@ -15,7 +15,7 @@ public class Demo1 {
 		 * System.out.println("Girls Party");
 		 */
 
-//		Approach-2 O(N)
+		// Approach-2 O(N)
 		int arr[] = { 1, 2, 3, 1, 7, 55, 1000, 444 };
 		HashMap<Integer, Boolean> map = new HashMap<>();
 		for (int i = 0; i < arr.length; i++) {
@@ -28,7 +28,7 @@ public class Demo1 {
 
 		System.out.println("Girls Party");
 
-//		Approach-3
+		// Approach-3
 		/* Hint: int hash[] = new int[10001] & hash[arr[i]] = 1 */
 
 	}
