@@ -21,6 +21,18 @@ public class Demo2 {
 		System.out.println("Main Call " + (a + b) + " Count is " + count);
 		count++;
 		main(null);
-
 	}
+	
+//	static void print(int num) {
+//		if(num == 0) {
+//			return;
+//		}
+//		
+//		print(num-1);
+//		System.out.println(num + " ");
+//	}
+//	
+//	public static void main(String[] args) {
+//		print(5);
+//	}
 }
