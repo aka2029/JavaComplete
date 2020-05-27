@@ -1,6 +1,6 @@
 // Mostly all the Recursion Questions done are from previous class but the main thing that is
 
-// done to do question both ways 1. returning no. 2. returning void signature
+// done to do question both ways.... 1. returning no. 2. returning void signature
 
 package lecture3;
 
@@ -11,6 +11,17 @@ public class Demo1 {
 		}
 		int returnValue = fact(num-1);
 		return num * returnValue;
+	}
+	
+	static void fact(int num, int result) {
+		if(num==1) {
+			System.out.println("Fact is "+result);
+			return ;
+			//return 1;
+		}
+		fact(num-1,num*result);
+		//int returnValue = fact(num-1);
+		//return num * returnValue;
 	}
 	
 	static void print(int num) {
