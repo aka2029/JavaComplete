@@ -17,3 +17,22 @@ public class HW2 {
 		print(5);
 	}
 }
+
+//	static int mirrorRecursive(int value) {
+//		System.out.print(value);
+//		if (value > 1) {
+//			mirrorRecursive(value - 1);
+//		}
+//
+//		if (value == 1) {
+//			System.out.print(0);
+//		}
+//
+//		System.out.print(value);
+//
+//		return value;
+//	}
+//
+//	public static void main(String[] args) {
+//		mirrorRecursive(5);
+//	}
