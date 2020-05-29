@@ -20,3 +20,27 @@ public class Demo1 {
 
 	}
 }
+
+/*
+	MY WAY..!!
+ 	
+ 	public class MissingNum {
+	
+	public static void main(String[] args) {
+		int[] givenArr = {1,2,3,4,5};
+		int[] missingArr = {1,2,3, 8 ,4,5};
+		int x = 0, y = 0;
+		
+		for(int i = 0; i < givenArr.length; i++) {
+			x = x ^ givenArr[i];
+		}
+		for(int i = 0; i < missingArr.length; i++) {
+			y = y ^ missingArr[i];
+		}
+		
+		int missingVal = x ^ y;
+		System.out.println(missingVal);
+	}
+}
+ 
+*/
