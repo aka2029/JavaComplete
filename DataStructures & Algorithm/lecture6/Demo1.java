@@ -5,6 +5,7 @@ package lecture6;
 import java.util.ArrayList;
 
 public class Demo1 {
+//	The SubSequence problem
 	static ArrayList<String> subSequence(String name) {
 		if(name.length()==0) {
 			ArrayList<String> list = new ArrayList<>();
@@ -21,6 +22,8 @@ public class Demo1 {
 		}
 		return finalList;
 	}
+	
+//	Bubble sort
 	static void sort(int arr[], int firstIndex, int lastIndex) {
 		if(lastIndex==0) {
 			return ;
@@ -45,7 +48,7 @@ public class Demo1 {
 //		for(int i : arr) {
 //			System.out.println(i);
 //		}
-		ArrayList<String> result = subSequence("amit");
+		ArrayList<String> result = subSequence("akash");
 		System.out.println(result);
 	}
 
