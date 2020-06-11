@@ -65,12 +65,13 @@ public class Demo1 {
 	public static void main(String[] args) {
 		int arr [] = {10,20,130,40,50,130,2};
 		
-		String msg = searchInArrayLastIndex(arr,130,0)>=0?"Found":"Not Found";
-		System.out.println(msg);
+//		String msg = searchInArrayLastIndex(arr,130,0)>=0?"Found":"Not Found";
 		
 //		String msg = isSortedArray(arr,0)?"Sorted ":"Not Sorted";
 		
-//		String msg = searchInArray(arr,14330,0)>=0?"Found":"Not Found";
+		String msg = searchInArray(arr,14330,0)>=0?"Found":"Not Found";
+		
+		System.out.println(msg);
 
 	}
 }

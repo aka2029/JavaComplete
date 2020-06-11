@@ -34,7 +34,7 @@ static int y = 0;
 		}
 		System.out.println(n);
 		for(int i = 1; i<=5; i++) {
-			tree(n-1); // tree (n-i)
+			tree(n-1);
 		}
 //		tree(n-1);
 //		tree(n-1);
@@ -43,7 +43,8 @@ static int y = 0;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(print(5));
+//		System.out.println(print(5));
 //		tree(3);
+		tree2(5);
 	}
 }

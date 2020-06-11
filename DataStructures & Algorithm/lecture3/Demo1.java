@@ -102,13 +102,18 @@ public class Demo1 {
 		return returnValue + str.charAt(0);
 	}
 	static void reverse(String str, String result) {
-//		if(str.length()==1) {
-//			return String.valueOf(str.charAt(0));
+//		static void reverse(String str, String result) {
+//			if(str.length() >= 1) {
+//				reverse(str.substring(1), str.charAt(0) + result);
+//			} else {
+//				System.out.println(result);
+//				return;
+//			}
 //		}
-//		String subString = str.substring(1);
-//		String returnValue = reverse(subString);
-//		//System.out.println(returnValue + " "+subString);
-//		return returnValue + str.charAt(0);
+//		public static void main(String[] args) {
+//			String str = "akash";
+//			reverse(str, "");
+//		}
 	}
 	
 	static void sumOfDigit(int num , int sum) {
