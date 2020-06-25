@@ -48,3 +48,27 @@ public class Demo1 {
 	}
 
 }
+
+/*
+ Why this doesn't work>>??
+ 
+ static void subSequence(String name) {
+		if(name.length() == 0) {
+			return;
+		}
+		
+		String arr[] = {};
+		
+		String curChar = String.valueOf(name.charAt(0));
+		String subString = name.substring(1);
+		
+		subSequence(subString);
+		
+		for(int i = 0; i< arr.length; i++) {
+			StringBuilder str = new StringBuilder(arr[i]);
+			str.append(curChar);
+			System.out.print(arr[i]);
+		}	
+	}
+ 
+ */
