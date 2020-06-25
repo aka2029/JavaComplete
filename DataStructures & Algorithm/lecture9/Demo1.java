@@ -3,6 +3,7 @@
 package lecture9;
 
 public class Demo1 {
+	//Permutaion
 	static void coinChange(int coins[], long amount, String result) {
 		if (amount == 0) {
 			System.out.println(result);
@@ -15,6 +16,7 @@ public class Demo1 {
 		}
 	}
 
+	//Combination
 	static void coinChange2(int coins[], int amount, String result, int lastIndex) {
 		if (amount == 0) {
 			System.out.println(result);
