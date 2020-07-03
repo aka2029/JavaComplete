@@ -6,16 +6,16 @@ import java.util.Scanner;
 
 class Node<T>{
 	T data;
-	Node<T> next;
-	//Node prev;
+	Node<T> next;	//refernce type
+	//Node prev;	//will be used when we make doubly linked list
 	Node(T data){
-		this.data = data;
-		//this.next = null;
+		this.data = data; 
+		//this.next = null; //by default
 	}
 	
 }
 class LinkedListOperations<T>{
-	Node<T> start;  // head
+	Node<T> start;  // head -> similar to next but it's the drawing part that makes the difference
 	Node<T> tail;
 	
 	void addInLast(Node<T> node) {
@@ -25,9 +25,10 @@ class LinkedListOperations<T>{
 		}
 		else {
 			tail.next  = node;
-			tail = node;
+			tail = node;	//here we're also incrementing the node
 		}
-		/*else {
+		/* Commented this because we didn't use tail and hence time complexity became O(n) and above with tail is O(1) 
+		 * else {
 			Node<T> temp = start;
 			while(temp.next!=null) {
 				temp = temp.next;
@@ -76,8 +77,8 @@ class LinkedListOperations<T>{
 		}
 	}
 }
-public class Demo1 {
 
+public class Demo1 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Data Type of LinkedList");
