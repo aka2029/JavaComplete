@@ -1,8 +1,11 @@
 package treedemo;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.TreeMap;
 
 class BNode{
 	int data;
@@ -11,6 +14,11 @@ class BNode{
 	BNode(int data){
 		this.data = data;
 	}
+	@Override
+	public String toString() {
+		return "BNode [data=" + data + "]";
+	}
+	
 }
 class BinaryTreeOperations{
 	Scanner s = new Scanner(System.in);
@@ -117,6 +125,107 @@ class BinaryTreeOperations{
 			}
 		}
 	}
+	
+	
+	void printVO(BNode root) {
+		TreeMap<Integer,ArrayList<Integer>> map = new TreeMap<>();
+		verticalOrder(root, 0, map);
+		for(Map.Entry<Integer,ArrayList<Integer>> m : map.entrySet()) {
+			System.out.println(m.getKey()+" "+m.getValue());
+		}
+	}
+	void verticalOrder(BNode root, int distance, TreeMap<Integer, ArrayList<Integer>> map) {
+		if(root == null) {
+			return ;
+		}
+		if(map.get(distance)==null) {
+			ArrayList<Integer> list = new ArrayList<>();
+			list.add(root.data);
+			map.put(distance, list);
+		}
+		else {
+			ArrayList<Integer> list = map.get(distance);
+			list.add(root.data);
+			map.put(distance, list);
+		}
+		verticalOrder(root.left, distance-1, map);
+		verticalOrder(root.right, distance+1, map);
+		
+	}
+	
+	void printTop(BNode root) {
+		TreeMap<Integer,Integer> map = new TreeMap<>();
+		topView(root, 0, map);
+		for(Map.Entry<Integer,Integer> m : map.entrySet()) {
+			System.out.println(m.getKey()+" "+m.getValue());
+		}
+	}
+	
+	void topView(BNode root, int distance, TreeMap<Integer, 
+			Integer> map) {
+		if(root == null) {
+			return ;
+		}
+		if(map.get(distance)==null) {
+			
+			
+			map.put(distance, root.data);
+		}
+		
+		topView(root.left, distance-1, map);
+		topView(root.right, distance+1, map);
+		
+	}
+	void printBottom(BNode root) {
+		TreeMap<Integer,Integer> map = new TreeMap<>();
+		bottomView(root, 0, map);
+		for(Map.Entry<Integer,Integer> m : map.entrySet()) {
+			System.out.println(m.getKey()+" "+m.getValue());
+		}
+	}
+	void bottomView(BNode root, int distance, TreeMap<Integer, 
+			Integer> map) {
+		if(root == null) {
+			return ;
+		}
+		
+			
+			
+			map.put(distance, root.data);
+		
+		
+		bottomView(root.left, distance-1, map);
+		bottomView(root.right, distance+1, map);
+		
+	}
+	
+	void leftViewOrder(BNode root) {
+		LinkedList<BNode> queue = new LinkedList<>();
+		queue.add(root);
+		queue.add(null); // Delimeter
+		while(!queue.isEmpty()) {
+			// Queue Traverse
+			// Current Level pick 0 and remove the rest
+			BNode first = queue.peek();
+			if(first!=null) {
+				System.out.println(first.data);
+			
+			while(queue.peek()!=null) {
+				if(first.left!=null) {
+					queue.add(first.left);
+				}
+				if(first.right!=null) {
+					queue.add(first.right);
+				}
+				queue.remove(); // Remove 10
+			}
+			queue.add(null);
+			}
+			queue.remove(); //Remove the last added null
+			
+			
+		}
+	}
 	boolean printAncestors(BNode root, int searchValue) {
 		if(root == null) {
 			return false;
@@ -177,11 +286,14 @@ public class BinaryTree {
 		// TODO Auto-generated method stub
 		BinaryTreeOperations opr = new BinaryTreeOperations();
 		BNode root = opr.add();
-		opr.print(root);
-		System.out.println(opr.height(root));
-		opr.levelOrder(root);
-		System.out.println(opr.countNodes(root));
-		System.out.println("Diameter "+opr.diameter(root));
+		opr.printTop(root);
+		//opr.printVO(root);
+		//opr.leftViewOrder(root);
+//		opr.print(root);
+//		System.out.println(opr.height(root));
+//		opr.levelOrder(root);
+//		System.out.println(opr.countNodes(root));
+//		System.out.println("Diameter "+opr.diameter(root));
 
 	}
 
