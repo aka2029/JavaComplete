@@ -40,7 +40,7 @@ class GenericTreeOperations {
 			str += root.children.get(i).data + " , ";
 		}
 		System.out.println(str.substring(0, str.length() - 2));
-		for (int i = 0; i < root.children.size(); i++) {
+		for (int i = 0; i < root.children.size(); i++) { //to remove the last comma(,) that comes as output
 			print(root.children.get(i));
 		}
 	}
