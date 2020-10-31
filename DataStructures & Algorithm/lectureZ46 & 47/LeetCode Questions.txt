@@ -1,0 +1,5 @@
+1. Single Number 2
+2. Power of two
+3. Majority Element
+4. Counting Bits 
+5. Sum of two integers
